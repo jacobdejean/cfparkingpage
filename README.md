@@ -1,6 +1,6 @@
 # CFParkingPage
 
-A minimal, customizable domain parking page for Cloudflare Pages.
+A minimal domain parking page for Cloudflare Pages.
 
 ## Overview
 
