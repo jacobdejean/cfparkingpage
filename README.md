@@ -6,6 +6,8 @@ A minimal, customizable domain parking page for Cloudflare Pages.
 
 CFParkingPage is a simple landing page for parking domains built with Astro and Tailwind and deployable on Cloudflare Pages. It displays clean defaults but does offers some basic customization.
 
+![Screenshot](https://github.com/jacobdejean/cfparkingpage/blob/42190f4507ab050dbd1834c976388bbb88f1a927/screenshots/SCR-20250405-tsbi.png)
+
 ## Features
 
 - Minimal design
