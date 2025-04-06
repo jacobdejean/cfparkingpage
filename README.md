@@ -16,21 +16,28 @@ CFParkingPage is a simple landing page for parking domains built with Astro and 
 
 Currently todo is adding a modal with a contact form
 
-## Usage
+## Deploying the Cloudflare Parking Page
 
-You can setup this landing page by following the commands below:
+1.  **Clone the project:**
 
-```sh
-# Copy the project
-git clone https://github.com/jacobdejean/cfparkingpage.git
+    ```sh
+    git clone https://github.com/jacobdejean/cfparkingpage.git
+    ```
 
-# Important, Wrangler will later pick this up as the project name
-mv cfparkingpage/ your-domain-name/
+2.  **Rename the directory:**  This step is crucial because Wrangler uses the directory name as the project name.
 
-cd your-domain-name/
-npm install
-npm run deploy
-```
+    ```sh
+    mv cfparkingpage/ your-domain-name/
+    ```
+    *(Replace `your-domain-name` with your actual domain name.)*
+
+3.  **Install and deploy the project:**
+
+    ```sh
+    cd your-domain-name/
+    npm install
+    npm run deploy
+    ```
 
 After the deploy command you will be greeted by Wrangler's project setup where you will be prompted to login and choose an account to deploy to.
 
