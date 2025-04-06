@@ -11,8 +11,30 @@ CFParkingPage is a simple landing page for parking domains built with Astro and 
 ## Features
 
 - Minimal design
-- Customizable via environment variables
+- Configure with environment variables
 - Mobile-responsive
+
+Currently todo is adding a modal with a contact form
+
+## Usage
+
+You can setup this landing page by following the commands below:
+
+```sh
+# Copy the project
+git clone https://github.com/jacobdejean/cfparkingpage.git
+
+# Important, Wrangler will later pick this up as the project name
+mv cfparkingpage/ your-domain-name/
+
+cd your-domain-name/
+npm install
+npm run deploy
+```
+
+After the deploy command you will be greeted by Wrangler's project setup where you will be prompted to login and choose an account to deploy to.
+
+Once deployed you will need to assign your domain, which you can do from the 'Custom Domains' tab you see once clicking into a pages project from the list of them. I would like to find a way to automate this part with Wrangler but this seems [not of interest](https://github.com/cloudflare/workers-sdk/issues/1146).
 
 ## Environment Variables
 
