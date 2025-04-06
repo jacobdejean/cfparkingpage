@@ -11,4 +11,5 @@
 	"observability": {
 		"enabled": true
 	}
+	/* "vars": { "PUBLIC_EMAIL": "inbox@domain.com" } */
 }

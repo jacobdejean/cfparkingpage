@@ -38,13 +38,21 @@ Currently todo is adding a modal with a contact form
     npm run deploy
     ```
 
-After the deploy command you will be greeted by Wrangler's project setup where you will be prompted to login and choose an account to deploy to.
+After the deploy command you will be greeted by Wrangler's project setup where you will be prompted to login and choose an account to deploy to. Make sure to select 'Create a new project'.
 
 Once deployed you will need to assign your domain, which you can do from the 'Custom Domains' tab you see once clicking into a pages project from the list of them. I would like to find a way to automate this part with Wrangler but this seems [not of interest](https://github.com/cloudflare/workers-sdk/issues/1146).
 
+Once the worker is deployed and the domain is connected, you're all set. What I like to do next is set up a forwarded address by navigating to domain in the dashboard, then finding 'Email Routing.' For example, if I'm parking a domain like 'jsonstorage.com', I'd like to have an 'inbox@jsonstorage.com' set up to foward to my business inbox. Once that is created, set `PUBLIC_EMAIL` variable to display it on the landing page.
+
 ## Environment Variables
 
-Customize the page content by setting these environment variables in your Cloudflare Pages project:
+Customize the page content by setting these environment variables in your Cloudflare Pages project.
+
+These can be set in one of a few ways depending on how you want to use the project.
+
+1. Run `wrangler pages secret put PUBLIC_EMAIL` then enter value when prompted. Need to run `npm run deploy` again.
+2. Navigates to project secrets in the web dashboard. Need to run `npm run deploy` again.
+3. Uncomment the 'vars' property in wrangler.jsonc and set value. Need to run `npm run deploy` again.
 
 ```
 PUBLIC_PAGE_TITLE
