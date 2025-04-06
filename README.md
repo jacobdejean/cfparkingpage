@@ -18,24 +18,23 @@ Currently todo is adding a modal with a contact form
 
 ## Deploying the Cloudflare Parking Page
 
-1.  **Clone the project:**
+1.  **Clone the project:** You'll do this for each domain you want to park.
 
     ```sh
     git clone https://github.com/jacobdejean/cfparkingpage.git
-    ```
-
-2.  **Rename the directory:**  This step is crucial because Wrangler uses the directory name as the project name.
-
-    ```sh
-    mv cfparkingpage/ your-domain-name/
-    ```
-    *(Replace `your-domain-name` with your actual domain name.)*
-
-3.  **Install and deploy the project:**
-
-    ```sh
-    cd your-domain-name/
+    cd cfparkingpage
     npm install
+    ```
+
+2.  **Rename the directory:** There are a few places the name needs to be updated so I've added a script [tooling/rename-project.sh](tooling/rename-project.sh) to automate this. It replaces 'cfparkingpage' in package.json, package-lock.json, and wranger.jsonc. Also renames the directory. .bak files are created for each file, these can be ignored or deleted if everything deploys correctly.
+
+    ```sh
+    npm run rename-project -- your-domain-name-com
+    ```
+
+3.  **Deploy the page:**
+
+    ```sh
     npm run deploy
     ```
 
