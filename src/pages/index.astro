@@ -1,16 +1,12 @@
 ---
 import "../styles/global.css";
-
 import Layout from "../layouts/Layout.astro";
 
-const title = import.meta.env.PUBLIC_PAGE_TITLE || "This Domain is Parked";
-const caption =
-    import.meta.env.PUBLIC_PAGE_CAPTION ||
-    "The owner of this domain has not yet published their website. Please check back later.";
-const copyright =
-    import.meta.env.PUBLIC_PAGE_COPYRIGHT ||
-    `© ${new Date().getFullYear()} All rights reserved`;
-const email = import.meta.env.PUBLIC_EMAIL ?? "";
+const { env } = Astro.locals.runtime;
+const title = env.PUBLIC_PAGE_TITLE ?? "This Domain is Parked";
+const caption = env.PUBLIC_PAGE_CAPTION ?? "The owner of this domain has not yet published their website. Please check back later.";
+const copyright = env.PUBLIC_PAGE_COPYRIGHT ?? `© ${new Date().getFullYear()} All rights reserved`;
+const email = env.PUBLIC_EMAIL ?? "";
 ---
 
 <Layout>
